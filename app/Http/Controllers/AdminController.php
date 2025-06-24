@@ -69,4 +69,11 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Room added successfully');
     }
+
+    public function view_room()
+    {
+        // $room = Room::find($request->id);
+        return view('admin.view_room');
+    }
+
 }
