@@ -28,7 +28,8 @@ class AdminController extends Controller
 
     public function home()
     {
-        return view('home.index');
+        $rooms = Room::all();
+        return view('home.index', compact('rooms'));
     }
 
     public function create_room()
