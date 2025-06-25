@@ -40,6 +40,7 @@
                     <th>Room Type</th>
                     <th>Image</th>
                     <th>Delete</th>
+                    <th>Update</th>
                 </tr>
                 @foreach($room as $room)
                 <tr>
@@ -53,6 +54,9 @@
                     </td>
                     <td>
                         <button class="btn btn-danger delete-btn" data-id="{{ $room->id }}">Delete</button>
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" href="{{ url('update_room/'.$room->id) }}">Update</a>
                     </td>
                 </tr>
                 @endforeach
