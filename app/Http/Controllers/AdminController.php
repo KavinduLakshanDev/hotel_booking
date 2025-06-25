@@ -72,8 +72,9 @@ class AdminController extends Controller
 
     public function view_room()
     {
-        // $room = Room::find($request->id);
-        return view('admin.view_room');
+
+        $room = Room::all();
+        return view('admin.view_room', compact('room'));
     }
 
 }
