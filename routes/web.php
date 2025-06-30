@@ -34,7 +34,7 @@ Route::post('/edit_room/{id}', [AdminController::class, 'edit_room']);
 route::get('/room_details/{room_id}', [HomeController::class, 'room_details']);
 route::post('/add_booking/{room_id}', [HomeController::class, 'add_booking']);
 
-route::get('/bookings', [AdminController::class, 'bookings']);
+route::get('/bookings', [AdminController::class, 'bookings'])->middleware(['auth', 'admin']);
 
 route::get('/delete_booking/{id}', [AdminController::class, 'delete_booking']);
 
