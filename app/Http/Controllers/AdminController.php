@@ -163,4 +163,9 @@ class AdminController extends Controller
             return redirect()->back()->with('error', 'Booking not found');
         }
     }
+
+    public function view_galary()
+    {
+        return view('admin.view_galary');
+    }
 }

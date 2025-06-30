@@ -40,3 +40,8 @@ route::get('/delete_booking/{id}', [AdminController::class, 'delete_booking']);
 
 route::get('/approve_booking/{id}', [AdminController::class, 'approve_booking']);
 route::get('/reject_booking/{id}', [AdminController::class, 'reject_booking']);
+
+route::get('/view_galary', [AdminController::class, 'view_galary']);
+route::post('/upload_gallary', [AdminController::class, 'upload_gallary']);
+
+
