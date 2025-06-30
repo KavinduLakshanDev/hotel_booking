@@ -21,19 +21,13 @@
                                  <a class="nav-link" href="{{url('/')}}">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="">About</a>
+                                 <a class="nav-link" href="{{url('our_rooms')}}">Our room</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="">Our room</a>
+                                 <a class="nav-link" href="{{url('hotel_gallary')}}">Gallery</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="">Gallery</a>
-                              </li>
-                              {{-- <li class="nav-item">
-                                 <a class="nav-link" href="blog.html">Blog</a>
-                              </li> --}}
-                              <li class="nav-item">
-                                 <a class="nav-link" href="">Contact Us</a>
+                                 <a class="nav-link" href="{{url('contact_us')}}">Contact Us</a>
                               </li>
 
                               @if (Route::has('login'))
