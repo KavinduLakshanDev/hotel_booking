@@ -39,7 +39,6 @@
                         <label for="room_title">Room Title:</label>
                         <input type="text" id="room_title" name="room_title" value="{{ $room->room_title }}" required>
                     </div>
-                    
                     <div class="div_design">
                         <label for="description">Description:</label>
                         <textarea id="description" name="description" required>{{ $room->description }}</textarea>
@@ -65,25 +64,19 @@
                             <option value="delux" >Delux</option>
                         </select>
                     </div>
-
                     <div class="div_design" >
                         <label for="image">Current Image:</label>
                         <img style="margin:auto;" width="100" src="/room/{{$room->image}}">
                     </div>
-
                     <div class="div_design">
                         <label for="image">Upload Image:</label>
                         <input type="file" id="image" name="image">
                     </div>
-
                     <div class="div_design">
                         <input type="submit" value="Update Room" class="btn btn-primary">
                     </div>
-                    
                 </form>
             </div>
-
-
           </div>
         </div>
    </div>

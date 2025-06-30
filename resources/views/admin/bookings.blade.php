@@ -75,9 +75,7 @@
                             <a class="btn btn-success" href="{{url('approve_booking', $booking->id)}}">Approve</a>
                         </span>
                         <a class="btn btn-warning" href="{{url('reject_booking', $booking->id)}}">Rejected</a>
-                    </td>
-                   
-                    
+                    </td> 
                 </tr>
                @endforeach
             </table>

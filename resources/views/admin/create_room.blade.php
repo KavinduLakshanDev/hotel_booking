@@ -70,11 +70,8 @@
                     <div class="div_design">
                         <input type="submit" value="Add Room" class="btn btn-primary">
                     </div>
-                    
                 </form>
             </div>
-
-
           </div>
         </div>
    </div>
