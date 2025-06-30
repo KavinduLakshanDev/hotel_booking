@@ -19,6 +19,7 @@
                     <li><a href="{{url('edit_room')}}">Edit Rooms</a></li>
                     <li><a href="{{url('delete_room')}}">Delete Rooms</a></li>
                   </ul>
-              </li>  
+              </li> 
+          <li><a href="{{url('bookings')}}"> <i class="icon-home"></i>Booking </a></li>     
         </ul>
       </nav>

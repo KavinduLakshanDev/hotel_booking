@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Room;
+use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -111,5 +112,17 @@ class AdminController extends Controller
         $room->save();
 
         return redirect()->back();
+    }
+
+    public function bookings()
+    {
+        // $bookings = \DB::table('bookings')
+        //     ->join('users', 'bookings.user_id', '=', 'users.id')
+        //     ->join('rooms', 'bookings.room_id', '=', 'rooms.id')
+        //     ->select('bookings.*', 'users.name as user_name', 'rooms.room_title as room_title')
+        //     ->get();
+        
+        $bookings = Booking::all();
+        return view('admin.bookings', compact('bookings'));
     }
 }
