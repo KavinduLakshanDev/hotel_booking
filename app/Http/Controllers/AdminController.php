@@ -18,7 +18,8 @@ class AdminController extends Controller
 
             if ($usertype == 'user') {
                 $room = Room::all();
-                return view('home.index', compact('room'));
+                $gallary = Galary::all();
+                return view('home.index', compact('room', 'gallary'));
             }
 
             if ($usertype == 'admin') {
