@@ -137,4 +137,30 @@ class AdminController extends Controller
             return redirect()->back()->with('error', 'Booking not found');
         }
     }
+
+    public function approve_booking($id)
+    {
+        $booking = Booking::find($id);
+
+        if ($booking) {
+            $booking->status = 'approved'; // Change status to approved
+            $booking->save();
+            return redirect()->back()->with('message', 'Booking approved successfully');
+        } else {
+            return redirect()->back()->with('error', 'Booking not found');
+        }
+    }
+
+    public function reject_booking($id)
+    {
+        $booking = Booking::find($id);
+
+        if ($booking) {
+            $booking->status = 'rejected'; // Change status to rejected
+            $booking->save();
+            return redirect()->back()->with('message', 'Booking rejected successfully');
+        } else {
+            return redirect()->back()->with('error', 'Booking not found');
+        }
+    }
 }

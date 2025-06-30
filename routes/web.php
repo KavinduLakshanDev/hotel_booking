@@ -37,3 +37,6 @@ route::post('/add_booking/{room_id}', [HomeController::class, 'add_booking']);
 route::get('/bookings', [AdminController::class, 'bookings']);
 
 route::get('/delete_booking/{id}', [AdminController::class, 'delete_booking']);
+
+route::get('/approve_booking/{id}', [AdminController::class, 'approve_booking']);
+route::get('/reject_booking/{id}', [AdminController::class, 'reject_booking']);
