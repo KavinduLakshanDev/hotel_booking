@@ -35,3 +35,5 @@ route::get('/room_details/{room_id}', [HomeController::class, 'room_details']);
 route::post('/add_booking/{room_id}', [HomeController::class, 'add_booking']);
 
 route::get('/bookings', [AdminController::class, 'bookings']);
+
+route::get('/delete_booking/{id}', [AdminController::class, 'delete_booking']);

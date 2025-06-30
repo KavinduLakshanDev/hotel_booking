@@ -41,6 +41,7 @@
                     <th>Room title</th>
                     <th>Price</th>
                     <th>Image</th>
+                    <th>Delete</th>
                 </tr>
                 
                 @foreach($bookings as $booking)
@@ -56,6 +57,9 @@
                     <td>{{$booking->room->price}}</td>
                     <td>
                         <img src="/room/{{$booking->room->image}}" alt="Room Image" style="width: 100px; height: 100px;">
+                    </td>
+                    <td>
+                        <a onclick="return confirm('Are you sure you want to delete this booking?')" class="btn btn-danger" href="{{url('delete_booking', $booking->id)}}">Delete</a>
                     </td>
                    
                     
